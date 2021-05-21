@@ -1,0 +1,29 @@
+/exports-undefined-when-trying-to-bundle-a-typescript-library-with-webpack
+
+sol:
+In webpack.config.js:
+
+output: {
+  ...
+  libraryTarget: 'umd',
+  library: 'MyPackageName',
+  ...
+}
+
+___________________________
+
+/react-createelement-type-is-invalid-expected-a-string
+
+sol:
+used the component as {function()} call instead of
+<Component/> inside the render
+
+___________________________
+
+
+new lesson learnt: webpack chunks are not meant to be used in the library
+because it will conflict with the output.publicPath configuration when
+used in the project.
+
+___________________________
+TODO: SEPARATE THEMES EXPORTS AND DYNAMIC IMPORT IT ON THE PROJECT
